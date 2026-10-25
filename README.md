@@ -1,6 +1,7 @@
 # 💻 ESP32-C3 BLE MacroPad
 
 C3-MacroPad adalah proyek DIY Bluetooth Low Energy (BLE) Macro Keyboard berbasis **ESP32-C3 Super Mini** dan **MicroPython**. Proyek ini dirancang khusus dengan fitur *Bonding Security* (Penyimpanan kunci LTK/IRK ke NVS Flash) dan penguncian Public MAC Address sehingga sangat stabil saat digunakan di lingkungan sistem operasi yang ketat seperti **Linux (Debian/BlueZ)**, Windows, maupun macOS.
+Menggunakan micropython sehingga macro key dapat di configurasi dengan mudah sesuai kebutuhan saat digunakan dengan cara merubah file config.py dan key dapat langsung di gunakan.
 
 ## ✨ Fitur Utama
 - **10 Tombol Hardware:** Mendukung single-press dan kombinasi/chord (beberapa tombol ditekan bersamaan).
