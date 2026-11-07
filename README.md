@@ -3,7 +3,7 @@
 C3-MacroPad adalah proyek DIY Bluetooth Low Energy (BLE) Macro Keyboard berbasis **ESP32-C3 Super Mini** dan **MicroPython**. Proyek ini dirancang khusus dengan fitur *Bonding Security* (Penyimpanan kunci LTK/IRK ke NVS Flash) dan penguncian Public MAC Address sehingga sangat stabil saat digunakan di lingkungan sistem operasi yang ketat seperti **Linux (Debian/BlueZ)**, Windows, maupun macOS.
 Menggunakan micropython sehingga macro key dapat di configurasi dengan mudah sesuai kebutuhan saat digunakan dengan cara merubah file config.py dan key dapat langsung di gunakan.
 
-## ✨ Fitur Utama
+##  Fitur Utama
 - **10 Tombol Hardware:** Mendukung single-press dan kombinasi/chord (beberapa tombol ditekan bersamaan).
 - **Multi-Profile:** Pindah mode seketika (contoh: Mode General, Coding, Meeting) lengkap dengan indikator kedipan LED on-board.
 - **Advanced Mapping:** Bisa memetakan tombol untuk shortcut standar, *sequence macro* berurutan, hingga mengetik teks (*auto-type*) secara instan.
@@ -12,7 +12,7 @@ Menggunakan micropython sehingga macro key dapat di configurasi dengan mudah ses
 
 ---
 
-## 🛠️ Kebutuhan Hardware
+##  Kebutuhan Hardware
 * 1x Board **ESP32-C3 Super Mini**
 * 10x Push Button Mekanik / Tactile Switch
 * Kabel jumper secukupnya
@@ -37,7 +37,7 @@ Pasangkan satu kaki dari masing-masing tombol ke pin GPIO berikut, dan kaki pasa
 
 ---
 
-## 🚀 Instalasi Software
+##  Instalasi Software
 1. Flash board ESP32-C3 Anda dengan **MicroPython** terbaru.
 2. Install library `aioble` ke dalam board (bisa melalui *Tools -> Manage Packages* di Thonny IDE).
 3. Salin 3 file utama dari *repository* ini ke direktori *root* (/) ESP32-C3 Anda:
@@ -48,7 +48,7 @@ Pasangkan satu kaki dari masing-masing tombol ke pin GPIO berikut, dan kaki pasa
 
 ---
 
-## ⚙️ Konfigurasi (`config.py`)
+##  Konfigurasi (`config.py`)
 Anda hanya perlu mengedit file `config.py` untuk menyesuaikan shortcut.
 Setiap profile menerima beberapa format *Action*:
 - **Tuple Kombinasi:** `(MOD_CTRL, KEY_C)` -> (Ctrl + C)
@@ -60,7 +60,7 @@ Secara default, kombinasi **Tombol 9 + Tombol 10 (`B8 | B9`)** digunakan untuk b
 
 ---
 
-## 🐧 Panduan Pairing Khusus Linux (Debian / BlueZ)
+##  Panduan Pairing Khusus Linux (Debian / BlueZ)
 Jika Anda menggunakan Linux, lakukan *pairing* via `bluetoothctl` di terminal (bukan lewat GUI Manager) agar proses *bonding security* tersimpan dengan sempurna di *cache* OS:
 
 ```bash
@@ -78,7 +78,7 @@ pair [MAC_ADDRESS_MACROPAD]
 connect [MAC_ADDRESS_MACROPAD]
 ```
 
-**⚠️ Troubleshooting Putus-Nyambung (Reconnect Loop) di Linux:**
+** Troubleshooting Putus-Nyambung (Reconnect Loop) di Linux:**
 Jika sebelumnya Anda pernah melakukan *pairing* namun *firmware* error dan sekarang C3-Macropad tidak mau tersambung ulang:
 1. Cabut USB Macropad.
 2. Bersihkan *cache* Bluetooth yang nyangkut di Debian:
@@ -90,7 +90,7 @@ Jika sebelumnya Anda pernah melakukan *pairing* namun *firmware* error dan sekar
 
 ---
 
-## 🧩 Menggunakan Tool Diagnostik (`pin_tester.py`)
+##  Menggunakan Tool Diagnostik (`pin_tester.py`)
 Jika Anda merakit ulang kabel dan bingung tombol mana terhubung ke pin mana:
 1. Hentikan (Stop) `main.py` di Thonny.
 2. Buka `pin_tester.py` dan klik **Run**.
